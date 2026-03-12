@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Contacto - STREETS</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">STREETS</div>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="tienda.html">Tienda</a>
+<a href="contacto.html">Contacto</a>
+</nav>
+
+</header>
+
+
+<section class="contacto">
+
+<div class="contacto-container">
+
+<h1>Comprar Producto</h1>
+
+<p class="contacto-texto">Completa el formulario para comprar.</p>
+
+<h3>Producto seleccionado:</h3>
+<p id="producto-seleccionado"></p>
+
+<form class="formulario">
+
+<input type="text" placeholder="Tu nombre" required>
+
+<input type="email" placeholder="Tu correo" required>
+
+<input type="text" id="producto-input" placeholder="Producto">
+
+<textarea placeholder="Mensaje"></textarea>
+
+<button class="btn">Enviar</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const producto = params.get("producto");
+
+if(producto){
+
+document.getElementById("producto-seleccionado").innerText = producto;
+
+document.getElementById("producto-input").value = producto;
+
+}
+
+</script>
+
+</body>
+
+</html>

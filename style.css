@@ -1,0 +1,367 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Roboto', sans-serif;
+background:#0a0a0a;
+color:white;
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 70px;
+background:#000;
+border-bottom:1px solid #1a1a1a;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-size:32px;
+letter-spacing:4px;
+font-family:'UnifrakturCook', cursive;
+}
+
+nav a{
+margin-left:35px;
+text-decoration:none;
+color:#aaa;
+font-size:15px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:white;
+}
+
+/* HERO */
+
+.hero{
+height:92vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px;
+
+background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),
+url("https://images.unsplash.com/photo-1520975922323-8d3d4a7c6e26");
+
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:90px;
+letter-spacing:8px;
+margin-bottom:15px;
+font-family:'UnifrakturCook', cursive;
+}
+
+.hero p{
+font-size:22px;
+color:#ccc;
+margin-bottom:30px;
+}
+
+/* BOTONES */
+
+.btn{
+display:inline-block;
+background:#111;
+border:1px solid #333;
+padding:13px 28px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+.btn:hover{
+background:red;
+border:1px solid red;
+transform:translateY(-3px);
+}
+
+/* SECCIONES */
+
+.productos,
+.destacados{
+padding:100px 80px;
+}
+
+.productos h1,
+.destacados h2{
+font-family:'UnifrakturCook', cursive;
+font-size:40px;
+margin-bottom:45px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
+}
+
+/* TARJETAS */
+
+.card{
+background:#111;
+border-radius:18px;
+overflow:hidden;
+border:1px solid #1f1f1f;
+transition:0.4s;
+position:relative;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.card:hover{
+transform:translateY(-12px);
+box-shadow:0 20px 40px rgba(0,0,0,0.7);
+border:1px solid #333;
+}
+
+/* ETIQUETAS */
+
+.tag{
+position:absolute;
+top:14px;
+left:14px;
+background:red;
+padding:6px 12px;
+font-size:12px;
+border-radius:6px;
+}
+
+/* IMAGEN */
+
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+transition:0.4s;
+}
+
+.card:hover img{
+transform:scale(1.08);
+}
+
+/* TEXTO TARJETAS */
+
+.card-body{
+padding:22px;
+}
+
+.card-body h3{
+font-size:19px;
+margin-bottom:8px;
+}
+
+.card-body p{
+font-size:14px;
+color:#aaa;
+}
+
+.price{
+margin-top:10px;
+font-size:21px;
+font-weight:bold;
+}
+
+/* CONTACTO */
+
+.contacto{
+padding:120px 20px;
+display:flex;
+justify-content:center;
+}
+
+.contacto-container{
+max-width:600px;
+width:100%;
+background:#111;
+padding:50px;
+border-radius:18px;
+border:1px solid #222;
+box-shadow:0 20px 50px rgba(0,0,0,0.6);
+}
+
+.contacto h1{
+font-family:'UnifrakturCook', cursive;
+font-size:44px;
+margin-bottom:10px;
+}
+
+.contacto-texto{
+color:#aaa;
+margin-bottom:35px;
+}
+
+.formulario{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.formulario input,
+.formulario textarea{
+background:#0a0a0a;
+border:1px solid #333;
+padding:14px;
+color:white;
+border-radius:10px;
+font-family:'Roboto', sans-serif;
+}
+
+.formulario input:focus,
+.formulario textarea:focus{
+outline:none;
+border:1px solid red;
+}
+
+/* PRODUCTO */
+
+.producto{
+padding:120px 80px;
+}
+
+.producto-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+max-width:1100px;
+margin:auto;
+}
+
+.producto-img img{
+width:100%;
+border-radius:18px;
+box-shadow:0 25px 60px rgba(0,0,0,0.7);
+}
+
+.producto-info h1{
+font-family:'UnifrakturCook', cursive;
+font-size:44px;
+margin-bottom:20px;
+}
+
+.producto-descripcion{
+color:#aaa;
+margin-bottom:25px;
+line-height:1.7;
+}
+
+.producto-detalles{
+color:#ccc;
+margin-bottom:25px;
+}
+
+.producto-precio{
+font-size:32px;
+font-weight:bold;
+margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:35px;
+border-top:1px solid #1a1a1a;
+margin-top:80px;
+color:#777;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+padding:20px 30px;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.productos,
+.destacados{
+padding:80px 30px;
+}
+
+.producto-container{
+grid-template-columns:1fr;
+}
+
+}
+/* EFECTO PRENDAS PRO */
+
+.card::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,0.08),transparent);
+opacity:0;
+transition:0.4s;
+}
+
+.card:hover::after{
+opacity:1;
+}
+.carrito{
+font-size:22px;
+cursor:pointer;
+margin-left:30px;
+transition:0.3s;
+}
+
+.carrito:hover{
+transform:scale(1.2);
+}
+/* ANIMACION DE CARGA */
+
+body{
+animation:fade 0.8s ease;
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+/* SCROLL SUAVE */
+
+html{
+scroll-behavior:smooth;
+}
+
+/* SELECCION TEXTO */
+
+::selection{
+background:red;
+color:white;
+}
